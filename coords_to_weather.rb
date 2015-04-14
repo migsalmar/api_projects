@@ -19,7 +19,7 @@ the_longitude = gets.chomp
 #   address_to_coords.rb to read from a remote API and parse
 #   the results.
 
-url_of_data_we_want = '"https://api.forecast.io/forecast/ca8abc9e3420cd2d4bd4e8015cfad928/'+the_latitude + ','+the_longitude+'"'
+url_of_data_we_want = 'https://api.forecast.io/forecast/ca8abc9e3420cd2d4bd4e8015cfad928/'+the_latitude + ','+the_longitude
 raw_data = open(url_of_data_we_want).read
 parsed_data = JSON.parse(raw_data)
 

@@ -14,7 +14,7 @@ puts "What is the address you would like to know the weather for?"
 street_address = gets.chomp
 url_safe_street_address = URI.encode(street_address)
 
-url_of_data_we_want = '"https://api.forecast.io/forecast/ca8abc9e3420cd2d4bd4e8015cfad928/'+#{the_latitude} + #{the_longitude}+'"'
+url_of_data_we_want = 'https://api.forecast.io/forecast/ca8abc9e3420cd2d4bd4e8015cfad928/'+#{the_latitude} + #{the_longitude}
 raw_data = open(url_of_data_we_want).read
 parsed_data = JSON.parse(raw_data)
 
